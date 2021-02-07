@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20190103</CreaDate><CreaTime>18002100</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Conversion Tools.tbx\PolygonToRaster" Date="20190103" Time="180021">PolygonToRaster ca_eco_l3 US_L3CODE "J:\Text\Courses\ESS162_19\GIS data\Lab 2\CAecoregion4.tif" CELL_CENTER NONE 0.041666667</Process></lineage></DataProperties></Esri></metadata>
