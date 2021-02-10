@@ -14,7 +14,7 @@ import numpy as np
 # Reading in and cleaning data
 cwd = os.getcwd()
 filesLab4 = os.listdir(cwd)
-hydroData = pd.read_excel(io=filesLab4[3])
+hydroData = pd.read_excel(io="CAwater balance 2.xlsx")
 hydroData = hydroData.dropna(axis=1)
 # %%
 # Purpose: Analyzing the data for the state as a whole
@@ -246,47 +246,41 @@ kingsRiver["runoffCombined"] = kingsRiver["precipCC"] - kingsRiver["AET_CC"]
 # (3) plotting original data (precip, AET, runoff) vs temperature and new
 # data vs temperature along with their regressions. Each of these 3 variables
 # will be plotted on a separate plot in the same figure as the other plots.
-kingsCCtitle = "Kings River Basin's PPT, AET, and runoff with climate change"
-py.figure(num=kingsCCtitle, figsize=(20, 15))
+kingsCCtitle = "Kings River Basin's AET and runoff with climate change"
+py.figure(num=kingsCCtitle, figsize=(8, 10))
 kingsRiver["Theo Temp"] = np.linspace(3, 32, num=232)
 
 # Plotting precipitation
-kingsRiver["Regress Precip"] = mPrecip*kingsRiver["Theo Temp"] + bPrecip
-plot2Vars(kingsRiver, [2, 2, 1], kingsCCtitle, "Precipitation", "Tmaxnormal",
-          "precip2normal", "Mean annual max temperature (degrees C)",
-          "Precipitation (mm/yr)", "ob", "Original Precipitation")
-plot2Vars(kingsRiver, [2, 2, 1], kingsCCtitle, "Precipitation", "tempCC",
-          "precipCC", "Mean annual max temperature (degrees C)",
-          "Precipitation (mm/yr)", "oy", "6 degrees C increase")
-plot2Vars(kingsRiver, [2, 2, 1], kingsCCtitle, "Precipitation", "Theo Temp",
-          "Regress Precip", "Mean annual max temperature (degrees C)",
-          "Precipitation (mm/yr)", "-m", "Regression")
-py.legend()
+# kingsRiver["Regress Precip"] = mPrecip*kingsRiver["Theo Temp"] + bPrecip
+# plot2Vars(kingsRiver, [2, 2, 1], kingsCCtitle, "Precipitation", "Tmaxnormal",
+#           "precip2normal", "Mean annual max temperature (degrees C)",
+#           "Precipitation (mm/yr)", "ob", "Original Precipitation")
+# plot2Vars(kingsRiver, [2, 2, 1], kingsCCtitle, "Precipitation", "tempCC",
+#           "precipCC", "Mean annual max temperature (degrees C)",
+#           "Precipitation (mm/yr)", "oy", "6 degrees C increase")
+# plot2Vars(kingsRiver, [2, 2, 1], kingsCCtitle, "Precipitation", "Theo Temp",
+#           "Regress Precip", "Mean annual max temperature (degrees C)",
+#           "Precipitation (mm/yr)", "-m", "Regression")
+# py.legend()
 
 # Plotting evapotranspiration
 kingsRiver["Regress ET"] = mET*kingsRiver["Theo Temp"] + bET
-plot2Vars(kingsRiver, [2, 2, 2], kingsCCtitle, "Evapotranspiration",
+plot2Vars(kingsRiver, [2, 1, 1], kingsCCtitle, "Evapotranspiration",
           "Tmaxnormal", "AET", "Mean annual max temperature (degrees C)",
           "Evapotranspiration (mm/yr)", "sb", "Original Evapotranspiration")
-plot2Vars(kingsRiver, [2, 2, 2], kingsCCtitle, "Evapotranspiration", "tempCC",
+plot2Vars(kingsRiver, [2, 1, 1], kingsCCtitle, "Evapotranspiration", "tempCC",
           "AET_CC", "Mean annual max temperature (degrees C)",
-          "Evapotranspiration (mm/yr)", "sk", "6 degrees C increase")
-plot2Vars(kingsRiver, [2, 2, 2], kingsCCtitle, "Evapotranspiration",
+          "Evapotranspiration (mm/yr)", "sr", "6 degrees C increase")
+plot2Vars(kingsRiver, [2, 1, 1], kingsCCtitle, "Evapotranspiration",
           "Theo Temp", "Regress ET", "Mean annual max temperature (degrees C)",
           "Evapotranspiration (mm/yr)", "-m", "Regression")  # Regression
 py.legend()
 
 # Plotting runoff
-plot2Vars(kingsRiver, [2, 2, 3], kingsCCtitle, "Runoff", "Tmaxnormal",
+plot2Vars(kingsRiver, [2, 1, 2], kingsCCtitle, "Runoff", "Tmaxnormal",
           "precip - ET", "Mean annual max temperature (degrees C)",
           "Runoff (mm/yr)", "^b", "Original Runoff")  # Current data
-plot2Vars(kingsRiver, [2, 2, 3], kingsCCtitle, "Runoff", "tempCC", "runoffPPT",
-          "Mean annual max temperature (degrees C)", "Runoff (mm/yr)", "^y",
-          "Change due to precipitation only")
-plot2Vars(kingsRiver, [2, 2, 3], kingsCCtitle, "Runoff", "tempCC", "runoffAET",
-          "Mean annual max temperature (degrees C)", "Runoff (mm/yr)", "^k",
-          "Change due to evapotranspiration only")
-plot2Vars(kingsRiver, [2, 2, 3], kingsCCtitle, "Runoff", "tempCC",
-          "runoffCombined", "Mean annual max temperature (degrees C)",
-          "Runoff (mm/yr)", "^r", "Change due to combined effects")
+plot2Vars(kingsRiver, [2, 1, 2], kingsCCtitle, "Runoff", "tempCC",
+          "runoffAET", "Mean annual max temperature (degrees C)",
+          "Runoff (mm/yr)", "^r", "6 degrees C increase")
 py.legend()
