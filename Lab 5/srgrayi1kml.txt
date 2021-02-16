@@ -1,0 +1,517 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: USGS National Center for EROS 
+      Publication_Date: 200509
+      Title: Grayscale North America Shaded Relief – 1-Kilometer Resolution
+      Geospatial_Data_Presentation_Form: Map
+      Publication_Information:
+        Publication_Place: Reston, VA
+        Publisher: National Atlas of the United States
+      Online_Linkage: <http://nationalatlas.gov/atlasftp.html>
+  Description:
+    Abstract:
+      The grayscale North America shaded relief data were derived from the 
+      GTOPO30 elevation data.  GTOPO30 is a global digital elevation model (DEM) 
+      with a horizontal grid spacing of 30 arc seconds (approximately 1 
+      kilometer).  GTOPO30 was derived from several raster and vector sources of
+      topographic information.  It was developed between 1993 and 1996 through 
+      a collaborative effort led by staff at the U.S. Geological Survey's 
+      National Center for EROS.  The following organizations participated by 
+      contributing funding or source data: the National Aeronautics and Space
+      Administration (NASA), the United Nations Environment Programme/Global 
+      Resource Information Database (UNEP/GRID), the U.S. Agency for 
+      International Development (USAID), the Instituto Nacional de Estadistica 
+      Geografica e Informatica (INEGI) of Mexico, the Geographical Survey 
+      Institute (GSI) of Japan, Manaaki Whenua Landcare Research of New 
+      Zealand, and the Scientific Committee on Antarctic Research (SCAR).  
+    Purpose:
+      The grayscale shaded relief image were developed to portray the terrain 
+      of North America.  It is intended for visual purposes only.  The original 
+      GTOPO30 data must be used for conducting analysis and determining 
+      elevation values.
+    Supplemental_Information:
+      The associated world file is included as part of the GeoTIFF.  The 
+      contents of the world file are:
+      >1000.0000
+      >0.000000
+      >0.000000
+      >-1000.0000
+      >-6086629.0000
+      >4488761.0000
+
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Range_of_Dates/Times:
+        Beginning_Date: 19930101
+        Ending_Date: 200209
+    Currentness_Reference: Dates of the elevation data
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: None planned
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: 166
+      East_Bounding_Coordinate: -4
+      North_Bounding_Coordinate: 83
+      South_Bounding_Coordinate: 15
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: ISO 19115 Topic Category
+      Theme_Keyword: Elevation
+      Theme_Keyword: Imagery/Base Maps/Earth Cover
+    Theme:
+      Theme_Keyword_Thesaurus: None
+      Theme_Keyword: Digital Elevation Model
+      Theme_Keyword: Shaded Relief
+      Theme_Keyword: Topography
+      Theme_Keyword: Topographic
+      Theme_Keyword: DEM
+      Theme_Keyword: GTOPO30
+    Place:
+      Place_Keyword_Thesaurus: None
+      Place_Keyword: North America
+      Place_Keyword: Canada
+      Place_Keyword: Greenland
+      Place_Keyword: Iceland
+      Place_Keyword: United States
+      Place_Keyword: Mexico
+      Place_Keyword: Caribbean
+      Place_Keyword: Puerto Rico
+      Place_Keyword: Virgin Islands
+      Place_Keyword: Alabama
+      Place_Keyword: Alaska
+      Place_Keyword: Arizona
+      Place_Keyword: Arkansas
+      Place_Keyword: California
+      Place_Keyword: Colorado
+      Place_Keyword: Connecticut
+      Place_Keyword: Delaware
+      Place_Keyword: District of Columbia
+      Place_Keyword: Florida
+      Place_Keyword: Georgia
+      Place_Keyword: Hawaii
+      Place_Keyword: Idaho
+      Place_Keyword: Illinois
+      Place_Keyword: Indiana
+      Place_Keyword: Iowa
+      Place_Keyword: Kansas
+      Place_Keyword: Kentucky
+      Place_Keyword: Louisiana
+      Place_Keyword: Maine
+      Place_Keyword: Maryland
+      Place_Keyword: Massachusetts
+      Place_Keyword: Michigan
+      Place_Keyword: Minnesota
+      Place_Keyword: Mississippi
+      Place_Keyword: Missouri
+      Place_Keyword: Montana
+      Place_Keyword: Nebraska
+      Place_Keyword: Nevada
+      Place_Keyword: New Hampshire
+      Place_Keyword: New Jersey
+      Place_Keyword: New Mexico
+      Place_Keyword: New York
+      Place_Keyword: North Carolina
+      Place_Keyword: North Dakota
+      Place_Keyword: Ohio
+      Place_Keyword: Oklahoma
+      Place_Keyword: Oregon
+      Place_Keyword: Pennsylvania
+      Place_Keyword: Rhode Island
+      Place_Keyword: South Carolina
+      Place_Keyword: South Dakota
+      Place_Keyword: Tennessee
+      Place_Keyword: Texas
+      Place_Keyword: Utah
+      Place_Keyword: Vermont
+      Place_Keyword: Virginia
+      Place_Keyword: Washington
+      Place_Keyword: West Virginia
+      Place_Keyword: Wisconsin
+      Place_Keyword: Wyoming
+  Access_Constraints: None.
+  Use_Constraints:
+    None.  Acknowledgment of the U.S. Geological Survey, National Center for 
+    EROS and (or) the National Atlas of the United States would be appreciated 
+    in products derived from these data.
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: John Hutchinson
+        Contact_Organization: SAIC
+      Contact_Address:
+        Address_Type: Mailing address
+        Address: USGS National Center for EROS 
+        City: Sioux Falls
+        State_or_Province: SD
+        Postal_Code: 57198-0001
+        Country: USA
+      Contact_Voice_Telephone: 605-594-6049
+      Contact_Electronic_Mail_Address: hutch@usgs.gov
+  Native_Data_Set_Environment: 
+    1-band TIFF format created using Arc/INFO 8.3 and then processed through 
+    custom software to create the GeoTIFF format.
+Data_Quality_Information:
+  Logical_Consistency_Report:
+    No tests for logical consistency have been performed on this map layer.
+  Completeness_Report:
+    Data completeness reflects the content of the original GTOPO30 elevation 
+    data.
+  Lineage:
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: U.S. Geological Survey
+          Publication_Date: 1996
+          Title: GTOPO30
+          Edition: 1
+          Publication_Information:
+            Publication_Place: Sioux Falls, SD
+            Publisher: National Center for EROS
+          Online_Linkage: <http://edcdaac.usgs.gov/gtopo30/gtopo30.html>      
+      Type_Of_Source_Media: Online
+      Source_Time_Period_of_Content:
+        Time_Period_Information:
+          Range_of_Dates/Times:
+            Beginning_Date: 1993
+            Ending_Date: 1996
+        Source_Currentness_Reference: Dates of the elevation data
+      Source_Citation_Abbreviation: GTOPO30
+      Source_Contribution: Elevation information.
+
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: USGS, National Center for EROS
+          Publication_Date: Unpublished material
+          Title: North America Elevation Grid
+      Type_of_Source_Media: Internal file
+      Source_Time_Period_of_Content:
+        Time_Period_Information:
+          Range_of_Dates/Times:
+            Beginning_Date: 19930101
+            Ending_Date: 19961231
+        Source_Currentness_Reference: Dates of the elevation data
+      Source_Citation_Abbreviation: Elevation1999
+      Source_Contribution: Elevation information.
+
+    Source_Information: 
+      Source_Citation: 
+        Citation_Information: 
+          Originator: U.S. Geological Survey 
+          Publication_Date: Unpublished material
+          Title: October, 2001, update to GTOPO30 
+      Type_of_Source_Media: Online 
+      Source_Time_Period_of_Content: 
+        Time_Period_Information: 
+          Single_Date/Time: 
+            Calendar_Date: 200110
+        Source_Currentness_Reference: Date of data acquisition. 
+      Source_Citation_Abbreviation: 2001 Update 
+      Source_Contribution: Elevation information. 
+
+    Source_Information: 
+      Source_Citation: 
+        Citation_Information: 
+          Originator: U.S. Geological Survey 
+          Publication_Date: Unpublished material
+          Title: September, 2002, update to GTOPO30 
+      Type_of_Source_Media: Online 
+      Source_Time_Period_of_Content: 
+        Time_Period_Information: 
+          Single_Date/Time: 
+            Calendar_Date: 200209
+        Source_Currentness_Reference: Date of data acquisition. 
+      Source_Citation_Abbreviation: 2002 Update 
+      Source_Contribution: Elevation information. 
+
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: National Imagery and Mapping Agency 
+          Publication_Date: 1990
+          Title: World Vector Shoreline
+          Publication_Information:
+            Publication_Place: Bethesda, MD
+            Publisher: National Imagery and Mapping Agency
+          Online_Linkage:
+            <http://www.ngdc.noaa.gov/mgg/shorelines/shorelines.html>
+      Type_of_Source_Media: Online
+      Source_Time_Period_of_Content:
+        Time_Period_Information:
+          Single_Date/Time: 
+            Calendar_Date: 1990 
+        Source_Currentness_Reference: Publication date
+      Source_Citation_Abbreviation: WVS 
+      Source_Contribution: Shoreline information.
+
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: USGS, National Center for EROS
+          Publication_Date: Unpublished material
+          Title: North America Elevation Grid
+      Type_of_Source_Media: Internal file
+      Source_Time_Period_of_Content:
+        Time_Period_Information:
+          Range_of_Dates/Times:
+            Beginning_Date: 19930101
+            Ending_Date: 200209
+        Source_Currentness_Reference: Dates of the elevation data
+      Source_Citation_Abbreviation: Elevation2002
+      Source_Contribution: Elevation information.
+
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: National Atlas of the United States
+          Publication_Date: 1999
+          Title: Shoreline file in Lambert Azimuthal Equal Area projection
+          Publication_Information:
+            Publication_Place: Reston, VA
+            Publisher: National Atlas of the United States
+      Type_of_Source_Media: Internal file
+      Source_Time_Period_of_Content:
+        Time_Period_Information:
+          Range_of_Dates/Times:
+            Beginning_Date: 1972
+            Ending_Date: 1999
+        Source_Currentness_Reference: Ground condition
+      Source_Citation_Abbreviation: shorelp020l
+      Source_Contribution: Shoreline mask for area of coverage.
+
+    Source_Information:
+      Source_Citation:
+        Citation_Information:
+          Originator: USGS, National Center for EROS
+          Publication_Date: Unpublished material
+          Title: North America Grayscale Shaded Relief
+      Type_of_Source_Media: Internal file
+      Source_Time_Period_of_Content:
+        Time_Period_Information:
+          Range_of_Dates/Times:
+            Beginning_Date: 19930101
+            Ending_Date: 200209
+        Source_Currentness_Reference: Dates of the elevation data
+      Source_Citation_Abbreviation: Grayscale2002
+      Source_Contribution: Elevation information.
+
+    Process_Step:
+      Process_Description:
+        The mosaic of elevation data used for North America Shaded Relief was 
+        first assembled in 1999 for use on the National Atlas web site, and for 
+        a printed color map at 1:10,000,000 scale published that same year.  The 
+        original 1999 map layer was assembled from the following tiles of 
+        GTOPO30 elevation data: w180n90, w140n90, w100n90, w060n90, w020n90, 
+        w180n40, w140n40, w100n40, w060n40, w020n40.  The tiles were ingested 
+        into Arc/INFO with the IMAGEGRID command.  The resulting grids were 
+        combined into a single grid with the MERGE function.  This grid was then 
+        projected into the Lambert Azimuthal Equal Area projection, centered on 
+        100 degrees West, 45 degrees North.  The .prj file used for the Arc 
+        PROJECT command contained these parameters:
+        > INPUT
+        > PROJECTION GEOGRAPHIC
+        > UNITS DD
+        > PARAMETERS
+        > OUTPUT
+        > PROJECTION LAMBERT_AZIMUTHAL
+        > UNITS METERS
+        > XSHIFT 0.0
+        > YSHIFT 0.0
+        > PARAMETERS
+        > 0.0
+        > -100 0 0
+        > 45 0 0
+        > 0.0
+        > 0.0
+        > END
+        >
+        The western edge of the grid was extended to match that of the National 
+        Atlas of the United States Map Maker bounding rectangle, and the null 
+        cells in the extended area were converted to ocean color values using 
+        CON.
+      Source_Used_Citation_Abbreviation: GTOPO30
+      Process_Date: 1999
+      Source_Produced_Citation_Abbreviation: Elevation1999
+
+    Process_Step:
+      Process_Description:
+        In 2001 and 2002, some areas of the elevation mosaic were updated with 
+        improved data provided as internal files by science staff at EROS Data 
+        Center.  The first update, in October, 2001 featured two significant 
+        improvements:  1. Much of the GTOPO30 coverage of the conterminous 
+        United States was updated from higher resolution elevation data from the 
+        National Elevation Dataset;  2. Parts of northern Canada were corrected 
+        to remove a processing artifact that created an artificial pattern of 
+        "dimples" in the shaded relief.  These elevation data were used for a 
+        printed National Atlas product, the 2002 "Shaded Relief of North 
+        America" map published at 1:10,000,000 scale. 
+
+        In the second update, in September, 2002, data for Greenland were 
+        entirely replaced by a higher resolution dataset that, however, suffered 
+        from geometric distortion.  These new data for Greenland were adjusted 
+        to correct for geometric distortion in the northwest part of the island 
+        between the Robeson Channel and Cape Morris Jesup, and to improve 
+        registration with the coastline derived from World Vector Shoreline 
+        (WVS).  A link coverage was created in ArcEdit containing links between 
+        the original Greenland data and the new coastline.  The link coverage 
+        was used in the Arc ADJUST command to perform a linear transformation 
+        with bilinear resampling on the original image, stored as an Arc/INFO 
+        grid dataset.  The resulting image is geometrically correct and fits the 
+        WVS coastline.  This correction was applied to data for Greenland only. 
+      Source_Used_Citation_Abbreviation: Elevation1999
+      Source_Used_Citation_Abbreviation: 2001 Update
+      Source_Used_Citation_Abbreviation: 2002 Update
+      Source_Used_Citation_Abbreviation: WVS
+      Process_Date: 200212 
+      Source_Produced_Citation_Abbreviation: Elevation2002
+
+    Process_Step:
+      Process_Description:
+        Using the Arc/INFO Polygrid command, a 0/1 land/water mask was created 
+        for North America, using coastline data clipped from the National Atlas 
+        shoreline file.  The land/water mask was applied to the 16-bit elevation 
+        grid.  The masked elevation grid as well as the mask itself is available 
+        on request.
+
+        A grayscale shaded relief rendition of the elevation data was created 
+        with the Grid HILLSHADE command using these parameters:
+        >azimuth = 315 degrees
+        >sun elevation = 45 degrees
+        >Shadetype = SHADE
+        >Vertical exaggeration = 10.0
+
+        For access to the original 16-bit DEM data (Elevation2002), please 
+        contact the National Atlas. 
+      Source_Used_Citation_Abbreviation: shorelp020l
+      Source_Used_Citation_Abbreviation: Elevation2002
+      Process_Date: 200212 
+      Source_Produced_Citation_Abbreviation: Grayscale2002
+
+    Process_Step:
+      Process_Description:
+        To set colors for oceans the grayscale shaded relief image was first 
+        converted to index color in Photoshop.  Pixel value 255 was already 
+        reserved for water pixels, and so index 255 was set to rgb value (132, 
+        193, 255), the blue color for oceans used in the National Atlas online 
+        Map Maker.
+
+        Masked images from Photoshop were saved as TIFF's, then ingested into 
+        Arc/INFO's Grid module, saved as TIFF's from Arc/INFO, and then 
+        processed through a USGS GeoTIFF software program to create fully-
+        compliant GeoTIFFs with valid header information. 
+      Source_Used_Citation_Abbreviation: Grayscale2002
+      Process_Date: 200506
+
+Spatial_Data_Organization_Information:
+  Direct_Spatial_Reference_Method: Raster
+  Raster_Object_Information:
+    Raster_Object_Type: Grid Cell
+    Row_Count: 7273
+    Column_Count: 10366
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Planar:
+      Map_Projection:
+        Map_Projection_Name: Lambert Azimuthal Equal Area
+        Lambert_Azimuthal_Equal_Area:
+          Longitude_of_Projection_Center: -100.00
+          Latitude_of_Projection_Center: 45.00
+          False_Easting: 0.0
+          False_Northing: 0.0
+      Planar_Coordinate_Information:
+        Planar_Coordinate_Encoding_Method: Row and column
+        Coordinate_Representation:
+          Abscissa_Resolution: 1000.0
+          Ordinate_Resolution: 1000.0
+        Planar_Distance_Units: Meters
+    Geodetic_Model:
+      Horizontal_Datum_Name: None
+      Ellipsoid_Name: Sphere
+      Semi-major_Axis: 6370997.0
+      Denominator_of_Flattening_Ratio: 1.0
+
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: Shaded relief TIFF image grid cell
+      Entity_Type_Definition: 
+        Any of the data elements in the shaded relief file.
+      Entity_Type_Definition_Source: National Atlas of the United States
+    Attribute:
+      Attribute_Label: Shaded relief TIFF image values
+      Attribute_Definition: Index color values for the TIFF image.
+      Attribute_Definition_Source: National Atlas of the United States
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 255
+
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: 
+          Earth Science Information Center, U.S. Geological Survey
+      Contact_Address:
+        Address_Type: Mailing address
+        Address: 507 National Center
+        City: Reston
+        State_or_Province: VA
+        Postal_Code: 20192
+        Country: USA
+      Contact_Voice_Telephone: 1-888-ASK-USGS (1-888-275-8747)
+      Contact_Voice_Telephone: 703-648-5920
+      Contact_Instructions:
+        In addition to the address above there are other ESIC offices 
+        throughout the country.  A full list of these offices is at
+        <http://geography.usgs.gov/esic/esic_index.html>.
+  Distribution_Liability:
+    Although these data have been processed successfully on a computer system 
+    at the U.S. Geological Survey, National Center for EROS, no warranty 
+    expressed or implied is made by the U.S. Geological Survey regarding the 
+    utility of the data on any other system, nor shall the act of distribution 
+    constitute any such warranty.  Use of trademarks or formats does not 
+    constitute endorsement by the U.S. Geological Survey.  There are no 
+    copyright restrictions on the use, redistribution, or further processing of 
+    this map layer.  No responsibility is assumed by the U.S. Geological Survey 
+    in the use of these data.
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Format_Name: TIFF
+      Digital_Transfer_Option:
+        Online_Option:
+          Computer_Contact_Information:
+            Network_Address:
+              Network_Resource_Name:
+                <http://nationalatlas.gov/atlasftp.html>
+    Fees:
+      There is no charge for the map layer.  
+    
+Metadata_Reference_Information:
+  Metadata_Date: 20050809
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Person_Primary:
+        Contact_Person: Peg Rawson
+        Contact_Organization: National Atlas of the United States
+      Contact_Address:
+        Address_Type: Mailing address
+        Address: 12201 Sunrise Valley Drive
+        Address: MS-561 
+        City: Reston
+        State_or_Province: VA
+        Postal_Code: 20192
+        Country: USA
+      Contact_Voice_Telephone: 703-648-4183
+      Contact_Electronic_Mail_Address: atlasmail@usgs.gov
+  Metadata_Standard_Name: 
+    FGDC Content Standards for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Security_Information:
+    Metadata_Security_Classification_System: None
+    Metadata_Security_Classification: Unclassified
+    Metadata_Security_Handling_Description: None
+
