@@ -55,7 +55,7 @@ avgFireSize = groupByObject["Shape_Area"].mean()
 numOfFires = groupByObject["YEAR_"].count()
 
 # To get the most common causes each year, that's a bit difficult, so...
-causes = fireHistory.groupby(["YEAR_", "CAUSE"])["YEAR_"].count()
+causesNum = fireHistory.groupby(["YEAR_", "CAUSE"])["YEAR_"].count()
 # This counts the number of fires by their causes each year
 
 # %%
@@ -123,7 +123,7 @@ areaFireNumFig = "Burned area and number of fires time series"
 areaTimeSeries = "Burned area"
 fireNumTimeSeries = "Number of fires"
 meanFireSize = "Mean fire size"
-
+'''
 plotSimpleSeries(areaFireNumFig, (20, 10), areaTimeSeries, [2, 2, 1],
                  totalBurnedArea, "Year", "Burned Area (ha)", "o-r",
                  "Total burned area")  # Total burned area
@@ -135,7 +135,7 @@ plotSimpleSeries(areaFireNumFig, (20, 10), fireNumTimeSeries, [2, 2, 2],
                  "Number of fires")  # Number of fires
 plotSimpleSeries(areaFireNumFig, (20, 10), meanFireSize, [2, 2, 3],
                  avgFireSize, "Year", "Mean fire size (ha)",
-                 "o-k", "Mean fire size")  # Mean burned area per fire
+                 "o-k", "Mean fire size")  # Mean burned area per fire'''
 # %%
 # Purpose: Perform and plot linear regressions
 # Tasks:
@@ -164,6 +164,7 @@ totalVsSize = linregress(avgFireSize, totalBurnedArea)
 years = np.array(totalBurnedArea.index.tolist())
 
 # (2) Plot time-series linear regressions of all on original time-series
+'''
 totalBurnedEstimate = totalBurnedRegress[0]*years + totalBurnedRegress[1]
 py.subplot(2, 2, 1)
 py.plot(years, totalBurnedEstimate, "-m", label="Total burned area regression")
@@ -178,7 +179,7 @@ fireSizeEstimate = fireSizeRegress[0]*years + fireSizeRegress[1]
 py.subplot(2, 2, 3)
 py.plot(years, fireSizeEstimate, "-m", label="Fire size regression")
 py.legend()
-py.text(1898, 1350, r2strFireSize)
+py.text(1898, 1350, r2strFireSize)'''
 
 # (3) Create a function to plot 2 numpy arrays, lists, or Pandas series
 
@@ -252,6 +253,7 @@ def plot2Vars(figTitle, figSize, subplotTitle, subplotOrder, xValues, yValues,
 totalBurnedAreaFig = "Components of total burned area"
 totalVsNumEstimate = totalVsFireNum[0]*numOfFires + totalVsFireNum[1]
 numOfFiresSubplot = "Total burned area vs number of fires"
+'''
 plot2Vars(totalBurnedAreaFig, (20, 15), numOfFiresSubplot, [1, 2, 1],
           numOfFires, totalBurnedArea, "Number of fires per year",
           "Total burned area per year (ha)", "og", "Original data")
@@ -268,7 +270,7 @@ plot2Vars(totalBurnedAreaFig, (20, 15), numOfFiresSubplot, [1, 2, 2],
 plot2Vars(totalBurnedAreaFig, (20, 15), numOfFiresSubplot, [1, 2, 2],
           avgFireSize, totalVsSizeEstimate, "Mean fire size per year (ha)",
           "Total burned area per year (ha)", "-m", "Regression",
-          totalVsSize[2], [0, 600000])
+          totalVsSize[2], [0, 600000])'''
 # %%
 # Purpose: Analyzing how the causes of wildfires change over time
 # Tasks:
@@ -278,4 +280,72 @@ plot2Vars(totalBurnedAreaFig, (20, 15), numOfFiresSubplot, [1, 2, 2],
 # (3) Distinguishing between all human causes and natural causes (lightning)
 # (4) Performing regressions over time of each individual cause and the
 # combined human & natural causes
+#   (4a) Creating a function to do the regression
+#   (4b) Call the function on the causes dataframes
 # (5) Visualizing the causes over time
+
+# (1) Calculating the fire size and total burned area by fire causes annually
+# The number of fires by cause had already been calculated by this point
+sizeByCause = fireHistory.groupby(["YEAR_", "CAUSE"])["Shape_Area"].mean()
+totalAbyCause = fireHistory.groupby(["YEAR_", "CAUSE"])["Shape_Area"].sum()
+
+# (2) Wrangling the fire size, total burned area, and number of fires
+causesPath = firePerimeterFolder/'Causes description.xlsx'
+causesDescribed = pd.read_excel(causesPath).dropna(axis=1)
+causesDict = {}
+for index, row in causesDescribed.iterrows():
+    cause = row["Cause Code"]
+    description = row["Description"]
+    causesDict[cause] = description
+causesNum = causesNum.to_frame().unstack().droplevel(level=0, axis=1)
+causesNum = causesNum.reset_index().fillna(value=0, axis="columns")
+sizeByCause = sizeByCause.to_frame().unstack().droplevel(level=0, axis=1)
+sizeByCause = sizeByCause.reset_index().fillna(value=0, axis="columns")
+totalAbyCause = totalAbyCause.to_frame().unstack()
+totalAbyCause = totalAbyCause.droplevel(level=0, axis=1).reset_index()
+totalAbyCause = totalAbyCause.fillna(value=0, axis="columns")
+
+# (3) Distinguishing between all human causes and natural causes (lightning)
+'''Each integer in the following cases represents a column since the original
+data values for causes are integers
+'''
+causesNum["Manmade"] = (causesNum[2] + causesNum[3] + causesNum[4]
+                        + causesNum[5] + causesNum[6] + causesNum[7]
+                        + causesNum[8] + causesNum[10] + causesNum[11]
+                        + causesNum[12] + causesNum[13] + causesNum[15]
+                        + causesNum[16] + causesNum[18] + causesNum[19])
+causesNum["Natural"] = causesNum[1]
+causesNum["Miscellaneous/Unknown"] = causesNum[9] + causesNum[14]
+causesNum = causesNum.rename(mapper=causesDict, axis="columns")
+
+totalAbyCause["Manmade"] = (totalAbyCause[2] + totalAbyCause[3]
+                            + totalAbyCause[4] + totalAbyCause[5]
+                            + totalAbyCause[6] + totalAbyCause[7]
+                            + totalAbyCause[8] + totalAbyCause[10]
+                            + totalAbyCause[11] + totalAbyCause[12]
+                            + totalAbyCause[13] + totalAbyCause[15]
+                            + totalAbyCause[16] + totalAbyCause[18]
+                            + totalAbyCause[19])
+totalAbyCause["Natural"] = totalAbyCause[1]
+totalAbyCause["Miscellaneous/Unknown"] = totalAbyCause[9] + totalAbyCause[14]
+totalAbyCause = totalAbyCause.rename(mapper=causesDict, axis="columns")
+
+sizeByCause["Manmade"] = totalAbyCause["Manmade"]/causesNum["Manmade"]
+sizeByCause = sizeByCause.fillna(value=0, axis="columns")
+sizeByCause["Natural"] = sizeByCause[1]
+sizeByCause["Miscellaneous/Unknown"] = sizeByCause[9] + sizeByCause[14]
+sizeByCause = sizeByCause.rename(mapper=causesDict, axis=1)
+causesColumns = causesNum.columns.tolist()[1:]
+
+# (4) Performing regressions over time of each individual cause and the
+# combined human & natural causes
+#   (4a) Creating a function to do the regression
+for cause in causesColumns:
+    regress = linregress(causesNum["YEAR_"], causesNum[cause])
+    indexList = causesDescribed[causesDescribed["Description"] == cause].index.tolist()
+    print(indexList)
+    '''causesDescribed[indexVal, "m_fireNum"] = regress[0]
+    causesDescribed[indexVal, "b_fireNum"] = regress[1]
+    causesDescribed[indexVal, "r_fireNum"] = regress[2]
+    causesDescribed[indexVal, "r2_fireNum"] = regress[2]**2
+    causesDescribed[indexVal, "p_fireNum"] = regress[3]'''
